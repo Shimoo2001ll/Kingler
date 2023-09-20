@@ -8,14 +8,18 @@
 }
 :root{
     --main-head-color: #FB6D1D;
+    --main-text-color: #FFFFFF;
+    --main-body-background:#262422;
+    --main-div-bgcolor:#000000;
+    --main-container-background:linear-gradient(to top right, rgb(251, 109, 29,.5) 7% , #000000 50%);
     --main-transition:1.9s ease all ;
-    --main-background:linear-gradient(to top right, rgb(251, 109, 29,.5) 7% , #000000 50%);
+    
 }
 body{
 font-family: 'Poppins', sans-serif;
 font-family: 'Urbanist', sans-serif;
 transition: var(--main-transition);
-background-color: #000000 !important;
+background-color:var(--main-body-background) !important;
 }
 /*  start header */
 .navbar-brand{
@@ -24,6 +28,7 @@ background-color: #000000 !important;
 .nav-link{
     letter-spacing: 2.9px !important;
 }
+.btn-hover:hover,
 .nav-item :hover{
     color: var(--main-head-color) !important;
     padding: 6px;
@@ -32,6 +37,7 @@ background-color: #000000 !important;
     position: relative ;
     /* overflow: hidden; */
 }
+.btn-hover::after,
 .nav-item .nav-link::after{
     content: '';
     border-bottom: 1px solid var(--main-head-color);
@@ -40,6 +46,7 @@ background-color: #000000 !important;
   top: 100%;
   width: 0%;
 }
+.btn-hover:hover::after,
 .nav-item .nav-link:hover::after{
     width: 100%;
     transform-origin: left;
@@ -72,8 +79,9 @@ transform: translate(-50% , -10%);
     outline: var(--main-head-color) 2px solid !important;
     transition: var(--main-transition);
 }
+
 .btn:hover{
-    color:black !important;
+    color:var(--main-div-bgcolor) !important;
     background-color: var(--main-head-color) !important;
     letter-spacing: 1.6px;
 }
@@ -83,19 +91,33 @@ transform: translate(-50% , -10%);
     color: var(--main-head-color) !important;
     border-radius: 5px;
 }
+.main{
+    background: var(--main-body-background);
+}
 /*  end header */
 /* start about */
 .about{
-    background: var(--main-background);
+    background: var(--main-container-background);
 }
 /* .about .row .detal:nth-child(even){
     transform: translate(0,-20px) ;
 } */
 .about .row .detal:hover{
-    cursor: pointer;
+cursor: pointer;
 transform: translate(0,-50px) scale(1.1);
 margin: 10px;
 transition: .7s linear .4s;
 
 }
 /* end about */
+/* start tran */
+.tran-info{
+  background:linear-gradient(to bottom , rgb(251, 109, 29,.3) 10% , #262422 60%);
+ 
+}
+/* end tran */
+/* order */
+.news{
+    text-shadow: #FB6D1D 4px 4px 4px;
+}
+/* order */

@@ -12,7 +12,7 @@
     --main-body-background:#262422;
     --main-div-bgcolor:#000000;
     --main-container-background:linear-gradient(to top right, rgb(251, 109, 29,.5) 7% , #000000 50%);
-    --main-transition:1.9s ease all ;
+    --main-transition: .5s linear all ;
     
 }
 body{
@@ -121,3 +121,11 @@ transition: .7s linear .4s;
     text-shadow: #FB6D1D 4px 4px 4px;
 }
 /* order */
+/* react */
+.react div:hover{
+    transition: var(--main-transition);
+    cursor: pointer;
+    transform: scale(1.1) translatey(10px);
+background-image: linear-gradient(#5866fb , #dc08fc);
+}
+/* react */
